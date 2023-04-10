@@ -1,0 +1,114 @@
+/* Variables */
+:root {
+    --primary-color: #2F518E;
+    --secondary-color: #ffa559;
+    --dark-color: #2f2c3a;
+    --light-color: #F6F6F6;
+    --white-color: #fff;
+}
+
+/* Header */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.main-header {
+    background-color: var(--light-color);
+    padding: 1rem;
+}
+.main-header .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .main-nav .main-nav__links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-header .main-nav .main-nav__links ul li {
+    padding-right: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+.main-header .main-nav .main-nav__links ul li a {
+    display: inline-block;
+    color: var(--dark-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    transition: all .5s;
+}
+
+.main-header .main-nav .main-nav__links ul li a:hover {
+    border-bottom: 0.6rem solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.main-header .main-nav .main-nav__social .fa-brands{
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    margin-left: 1rem;
+    text-align: center;
+    border: 2px solid var(--dark-color);
+    border-radius: 50%;
+    padding: 1rem;
+    transition: all .5s;
+}
+
+.main-header .main-nav .main-nav__social i:hover{
+    background-color: var(--secondary-color);
+}
+.mobile {
+    display: none;
+}
+
+
+/* Responsive */
+
+@media (max-width:992px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 8px;
+    }
+
+    .main-header .main-nav .main-nav__links ul, .main-header .main-nav .main-nav__social {
+        display: none;
+    }
+
+    .main-header .main-nav a {
+        margin-left: 2rem;
+    }
+
+    .mobile {
+        display: block;
+        margin-right: 2rem;
+        color: var(--primary-color);
+    }
+    
+}
