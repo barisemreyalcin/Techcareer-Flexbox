@@ -14,6 +14,7 @@
     <title>MyBlogg | A Freelancer Web Developer Page...</title>
 </head>
 <body>
+    <!-- Header -->
     <header id="main-header" class="main-header">
         <div class="container">
             <div class="main-nav">
@@ -22,9 +23,19 @@
                 </a>
                 <nav class="main-nav__links">
                     <ul>
-                        <li><a href="#">Home Page</a></li>
+                        <li><a href="#">Home Page</a>
+                        <ul>
+                            <li class="dropdown"><a href="#blog">Blog</a></li>
+                            <li class="dropdown"><a href="#summary">Summary</a></li>
+                        </ul></li>
                         <li><a href="#">About Me</a></li>
-                        <li><a href="#">My Projects</a></li>
+                        <li><a href="#">My Projects</a>
+                        <ul>
+                            <li class="dropdown"><a href="">HTML Projects</a></li>
+                            <li class="dropdown"><a href="">CSS Projects</a></li>
+                            <li class="dropdown"><a href="">Bootstrap Projects</a></li>
+                            <li class="dropdown"><a href="">JavaScript Projects</a></li>
+                        </ul></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
@@ -38,5 +49,38 @@
             </div>
         </div>
     </header>
+
+    <!-- Blog -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="blog__path">
+                <a href="index.html" class="link1">Home Page</a> 
+                <i class="fa-solid fa-chevron-right"></i> <a href="#" class="link2">Blog</a>
+            </div>
+            <header class="blog__header">
+                <h1>Blog</h1>
+                <div class="blog__header__badge">
+                    A Blog Page of a Fresh Developer
+                </div>
+            </header>
+            <div class="blog__banner">
+                <div class="row">
+                    <div class="col">
+                        <div class="col-2 bg">
+                            <img src="img/bg.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="col-2 blog__banner__body">
+                            <h2>My Roadmap to Become a Great Front-End Developer</h2>
+                            <p>My name is Barış Emre Yalçın and I am a Front-End Developer. It has been 5 months since I started to learn Front-End Web Development, and there is still long way to progress... However, I am happy and hopeful on this road.</p>
+                            <button><i class="fa-solid fa-chevron-right"></i> Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </body>
 </html>

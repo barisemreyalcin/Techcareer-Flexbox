@@ -8,14 +8,20 @@
 }
 
 /* Header */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 10px;
 }
 
 body {
     font-size: 1.6rem;
-    margin: 0;
-    padding: 0;
+    
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -25,34 +31,73 @@ a {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .main-header {
     background-color: var(--light-color);
     padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+
 .main-header .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.main-header .main-nav .main-nav__links ul {
+.main-header .main-nav .main-nav__links > ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-header .main-nav .main-nav__links ul li {
+.main-header .main-nav .main-nav__links > ul > li {
     padding-right: 3rem;
     letter-spacing: 0.1rem;
+    position: relative;
 }
 
-.main-header .main-nav .main-nav__links ul li a {
+.main-header .main-nav .main-nav__links > ul > li > ul {
+    position: absolute;
+    display: block;
+    /* width: 18rem; */
+    border-radius: 4px;
+    margin-top: 2px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+}
+
+.main-header .main-nav .main-nav__links > ul > li:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.main-header .main-nav .main-nav__links > ul > li .dropdown:hover {
+    background-color: var(--secondary-color);
+}
+
+.main-header .main-nav .main-nav__links > ul > li ul .dropdown {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid var(--light-color)
+}
+
+.main-header .main-nav .main-nav__links > ul > li ul .dropdown a {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    width: 18rem;
+    display: inline-block;
+}
+
+.main-header .main-nav .main-nav__links > ul > li > a {
     display: inline-block;
     color: var(--dark-color);
     border-bottom: 2px solid var(--primary-color);
@@ -60,7 +105,7 @@ ul {
     transition: all .5s;
 }
 
-.main-header .main-nav .main-nav__links ul li a:hover {
+.main-header .main-nav .main-nav__links > ul > li > a:hover {
     border-bottom: 0.6rem solid var(--primary-color);
     color: var(--primary-color);
 }
