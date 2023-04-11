@@ -3,6 +3,7 @@
     --primary-color: #2F518E;
     --secondary-color: #ffa559;
     --dark-color: #2f2c3a;
+    --medium-color: #d0dbe2;
     --light-color: #F6F6F6;
     --white-color: #fff;
 }
@@ -44,6 +45,11 @@ ul {
     background-color: var(--light-color);
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .main-header .main-nav {
@@ -154,6 +160,10 @@ ul {
         display: block;
         margin-right: 2rem;
         color: var(--primary-color);
+    }
+
+    .mobile a:active {
+        color: var(--secondary-color);
     }
     
 }
